@@ -13,7 +13,7 @@ const { defineConfig, devices } = require("@playwright/test");
 module.exports = defineConfig({
   webServer: {
     command: "npm run start",
-    port: 5500,
+    port: 8081,
     timeout: 120 * 1000,
   },
   testDir: "./e2e-tests",
@@ -30,7 +30,7 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "http://localhost:5500/",
+    baseURL: "http://localhost:8081/",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
