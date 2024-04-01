@@ -13,7 +13,7 @@ const { defineConfig, devices } = require("@playwright/test");
 module.exports = defineConfig({
   webServer: {
     command: "npm run start-prod",
-    url: "http://127.0.0.1:5500",
+    port: 5500,
     timeout: 120 * 1000,
   },
   testDir: "./e2e-tests",
