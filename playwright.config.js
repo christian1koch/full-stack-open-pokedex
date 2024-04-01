@@ -15,6 +15,7 @@ module.exports = defineConfig({
     command: "npm run start",
     port: 8081,
     timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
   },
   testDir: "./e2e-tests",
   /* Run tests in files in parallel */
