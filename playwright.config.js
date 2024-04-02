@@ -12,7 +12,7 @@ const { defineConfig, devices } = require("@playwright/test");
  */
 export default defineConfig({
   webServer: {
-    command: "npm run start-prod",
+    command: "npm run start-build",
     port: 5500,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
