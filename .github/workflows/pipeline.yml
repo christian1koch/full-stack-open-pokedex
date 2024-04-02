@@ -25,6 +25,7 @@ jobs:
         run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
         if: ${{ github.event_name == 'push' }}
   tag_release:
+    if: contains(github.event.head_commit.message, '#skip') == false
     permissions:
       contents: write
     needs: [simple_deployment_pipeline]
